@@ -22,6 +22,12 @@ On the command-line:
 urlopener -url 'https://amazon.de/'
 ```
 
+## tasks
+
+Next:
+
+  - [ ] implement tests.
+
 ## misc
 
 Based on:
