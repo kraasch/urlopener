@@ -32,13 +32,34 @@ type TestSuite struct {
 
 var suites = []TestSuite{
   /*
-  * Test for the function Toast().
+  * Test for the function isWsl().
   */
   {
     testingFunction:
     func(in TestList) (out string) {
       inputValue := in.inputArr[0]
-      out = Toast(inputValue)
+      out = isWsl(inputValue)
+      return
+    },
+    tests:
+    []TestList{
+      // {
+      //   testName:      "category_description_number00",
+      //   isMulti:       false,
+      //   inputArr:      []string{"is nice!"},
+      //   expectedValue: "\"Toast: is nice!\"",
+      // },
+    },
+  },
+  /*
+  * Test for the function OpenUrl(url string) -> error.
+  */
+  {
+    testingFunction:
+    func(in TestList) (out string) {
+      inputValue := in.inputArr[0]
+      err = OpenUrl(inputValue)
+      out = fmt.Sprintf("%v", err)
       return
     },
     tests:
